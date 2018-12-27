@@ -76,8 +76,7 @@ RUN cd /tmp && git clone --recursive https://github.com/USCiLab/cereal && \
 #COPY ./* /tmp/flashlight/
 
 
-RUN cd /tmp && git clone --recursive https://github.com/paiforsyth/flashlight.git 
-RUN   cd /tmp/flashlight && \
+RUN cd /tmp && git clone --recursive https://github.com/paiforsyth/flashlight.git &&  cd /tmp/flashlight && \
     mkdir -p build && cd build && \
     cmake .. -DCMAKE_BUILD_TYPE=Release -DFLASHLIGHT_BACKEND=CUDA -DFL_BUILD_DISTRIBUTED=OFF &&  \
     make -j8  && \
