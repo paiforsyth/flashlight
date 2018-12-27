@@ -149,7 +149,6 @@ set(
   Autograd
   Common
   Dataset
-  Distributed
   Meter
   NN
   Optim
